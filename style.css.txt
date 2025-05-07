@@ -1,0 +1,31 @@
+/* colour scheme */
+:root{
+  --green:#4CAF50;
+  --green-dark:#439b47;
+  --bg:#f5f5f5;
+  --text:#222;
+  --danger:#e74c3c;
+}
+
+/* reset & layout */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:var(--bg);display:flex;flex-direction:column;min-height:100vh}
+header{background:var(--green);color:#fff;padding:1rem;text-align:center}
+nav{margin-top:0.5rem}
+nav button{background:#fff;color:var(--green-dark);border:none;padding:0.4rem 0.8rem;
+  border-radius:4px;margin:0 0.2rem;cursor:pointer;font-weight:bold}
+nav button.active{background:var(--green-dark);color:#fff}
+.container{max-width:900px;margin:1rem auto;padding:1rem;background:#fff;border-radius:8px;
+  box-shadow:0 2px 5px rgba(0,0,0,.1)}
+.view{display:none}
+.view.visible{display:block}
+form{display:grid;gap:0.8rem}
+input,select,button{padding:0.5rem;font-size:1rem;border:1px solid #ccc;border-radius:4px}
+button.primary{background:var(--green);color:#fff;border:none}
+button.primary:hover{background:var(--green-dark)}
+button.danger{background:var(--danger);color:#fff;border:none;margin-top:1rem}
+table{width:100%;border-collapse:collapse;margin-top:1rem}
+th,td{padding:0.4rem;border:1px solid #ddd;text-align:left}
+th{background:#eee}
+.file{display:inline-block;margin-top:1rem}
+footer{margin-top:auto;text-align:center;padding:0.6rem;font-size:0.8rem;color:#666}

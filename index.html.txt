@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BryanJohnsonTransformation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>BryanJohnsonTransformation</h1>
+    <nav>
+      <button data-view="log"    class="active">Log</button>
+      <button data-view="history">History</button>
+      <button data-view="stats">Statistics</button>
+      <button data-view="settings">Settings</button>
+    </nav>
+  </header>
+
+  <!-- ========= LOG ========= -->
+  <section id="view-log" class="view visible">
+    <form id="exerciseForm">
+      <label>
+        Activity type:
+        <select id="exerciseType" name="exerciseType">
+          <option value="fitness">Fitness</option>
+          <option value="swimming">Swimming</option>
+          <option value="running">Running</option>
+          <option value="boxing">Boxing</option>
+          <option value="sixpack">Six-pack</option>
+          <option value="yoga">Yoga</option>
+          <option value="golf">Golf</option>
+          <option value="bouldering">Bouldering</option>
+        </select>
+      </label>
+
+      <div id="dynamicFields"></div>
+
+      <button type="submit" class="primary">Save entry</button>
+    </form>
+  </section>
+
+  <!-- ========= HISTORY ========= -->
+  <section id="view-history" class="view">
+    <table id="historyTable">
+      <thead>
+        <tr><th>Date</th><th>Activity</th><th>Details</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- ========= STATISTICS ========= -->
+  <section id="view-stats" class="view">
+    <div id="statsContent">No data yet.</div>
+  </section>
+
+  <!-- ========= SETTINGS ========= -->
+  <section id="view-settings" class="view">
+    <button id="exportBtn">Export data (JSON)</button>
+    <label class="file">
+      Import JSON file
+      <input type="file" id="importInput" accept=".json">
+    </label>
+    <button id="clearBtn" class="danger">Clear all data</button>
+  </section>
+
+  <footer>
+    <small>v1.0 &nbsp;|&nbsp; © 2024 BJT &nbsp;|&nbsp; PWA build</small>
+  </footer>
+</body>
+</html>
