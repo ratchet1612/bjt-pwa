@@ -101,6 +101,8 @@ qs('#exerciseForm').addEventListener('submit',e=>{
   hist.push(entry);
   saveHistory(hist);
   qs('#exerciseForm').reset();
+  loadHistory();          // Tabelle sofort neu zeichnen
+  renderStats();          // (optional) Statistik live updaten
   updateDynamicFields();
   alert('Saved!');
 });
