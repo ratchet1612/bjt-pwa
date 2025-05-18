@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bjt-cache-v1';
+const CACHE_NAME = 'bjt-cache-v2';   // neue Zahl
 const ASSETS = [
   '/',
   '/index.html',
